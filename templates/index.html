@@ -3,16 +3,17 @@
 {% block main_content %}
 
   <h2>List of Tasks</h2>
+  <br>
   <table class="table">
     <th>Title
-      <td>Description</td>
-      <td>Completed?</td>
+      <td><b>Description</b></td>
+      <td><b>Completed?</b></td>
     </th>
     {% for task in taskList %}
       <tr>
         <td>{{ task.title }}</td>
         <td>{{ task.description }}</td>
-        <td>{{ task.completed }}</td>
+        <td>{{ "Yes" if task.completed else "No" }}</td>
       </tr>
     {% endfor %}
   </table>

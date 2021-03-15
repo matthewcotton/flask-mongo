@@ -37,8 +37,9 @@ def add_task():
     form = AddForm()
     if form.validate_on_submit():
         newTask = Tasks(title=form.title.data,
-                        description=form.description.data, completed=form.completed.data).save()
-        flash('Task Added')
+                        description=form.description.data, completed=form.completed.data)
+        newTask.save()
+        flash('Task "' + newTask.title + '" Added')
         return redirect(url_for('get_tasks'))
     return render_template('add.html', title="Add Task", form=form)
 
