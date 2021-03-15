@@ -1,0 +1,48 @@
+# from flask import Flask
+# from mongoengine import *
+
+# app = Flask(__name__)
+
+# # Connect to MongoDB
+# connect(host="mongodb+srv://flask_user:VeFWloeju0dVbhdF@cluster0.3e1h8.mongodb.net/tasksdb?retryWrites=true&w=majority")
+
+# # Define Users schema
+
+
+# class Users(Document):
+#     username = StringField(required=True)
+#     password = StringField(required=True)
+
+# # Define Tasks schema
+
+
+# class Tasks(Document):
+#     title = StringField(required=True)
+#     description = StringField(required=True)
+#     completed = BooleanField(required=True)
+#     assigned_to = ReferenceField(Users)
+
+
+# # Add users to db
+# # boromir = Users(username="boromir", password="gondorwarrior").save()
+# # sam = Users(username="samwise", password="onemorestep").save()
+
+# # task1 = Tasks(title="Take One More Step",
+# #              description="If I take one more step it'll be farthers away from home I've every been.",
+# #              completed=True, assigned_to=sam).save()
+
+# for task in Tasks.objects:
+#   print(task.title)
+
+# @app.route('/')
+# def index():
+#   return "test"
+#   # taskList = []
+#   # for task in Tasks.objects:
+#   #   taskList.append(task)
+#   # return str(taskList)
+
+
+
+# if __name__ == "__main__":
+#     app.run(debug=True)
