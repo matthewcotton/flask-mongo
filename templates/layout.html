@@ -14,8 +14,22 @@
     />
   </head>
   <body>
-    <nav><h4 class="">Task Tracker: <a href="/tasks">Home</a></h4></nav>
-    {% block main_content %} {% endblock %}
+    <nav>
+      <h4 class="">
+        Task Tracker : <a href="/tasks">See Tasks</a> :
+        <a href="/add">Add Task</a> :
+      </h4>
+    </nav>
+    <br />
+    <hr />
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <h4>Notification(s)</h4>
+    <ul>
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %} {% endwith %} {% block main_content %} {% endblock %}
   </body>
   <script
     src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
