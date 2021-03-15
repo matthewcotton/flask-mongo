@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block main_content %}
+  <h1>Task List</h1>
+  <table class="table">
+    <th>Title
+      <td>Description</td>
+      <td>Completed?</td>
+    </th>
+    {% for task in taskList %}
+      <tr>
+        <td>{{ task.title }}</td>
+        <td>{{ task.description }}</td>
+        <td>{{ task.completed }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+
+{% endblock %}

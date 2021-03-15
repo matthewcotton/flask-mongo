@@ -1,2 +1,2 @@
-FLASK_APP=flask-mongo-demo.py
+FLASK_APP=task-api.py
 FLASK_ENV=development
