@@ -1,2 +1,2 @@
-FLASK_APP=TaskApp.py
+FLASK_APP=app.py
 FLASK_ENV=development
